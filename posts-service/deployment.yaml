@@ -1,0 +1,20 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: post-app
+  namespace: testing
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: post-app
+  template:
+    metadata:
+      labels:
+        app: post-app
+    spec:
+      containers:
+        - name: post-app
+          image: 'posts-service:v0.1'
+          ports:
+            - containerPort: 80
