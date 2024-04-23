@@ -10,7 +10,7 @@ spec:
     http:
       paths:
       - pathType: Prefix
-        path: "/users"
+        path: "/get-users"
         backend:
           service:
             name: users-app-service

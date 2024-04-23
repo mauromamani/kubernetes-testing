@@ -18,3 +18,11 @@ spec:
           image: 'users-service:v0.1'
           ports:
             - containerPort: 3000
+          resources:
+            requests:  
+              memory: "16Mi"
+              cpu: "100m"
+            limits:  
+              memory: "32Mi"
+              cpu: "150m"
+
